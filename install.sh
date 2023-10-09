@@ -1,7 +1,7 @@
 #!/bin/bash
-echo "===================================================="
-echo "This script will install the API-NodeMailer program."
-echo "===================================================="
+echo "========================================================"
+echo "This script will install the SunBeam File Server program"
+echo "========================================================"
 
 # Specify the source directory of the node.js app
 SOURCE_DIR="./"
