@@ -5,7 +5,11 @@ echo "========================================================"
 
 # Check if node.js is installed
 if ! [ -x "$(command -v node)" ]; then
-    echo "Error: node.js is not installed. Install it via npm. https://github.com/nvm-sh/nvm" >&2
+    echo "====================================================" >&2
+    echo "CRITICAL ERROR: node.js is not installed." >&2
+    echo "Install it via npm. " >&2
+    echo "https://github.com/nvm-sh/nvm" >&2
+    echo "====================================================" >&2
     exit 1
 fi
 
@@ -102,7 +106,7 @@ WantedBy=multi-user.target" > sunbeam.service
     sudo systemctl daemon-reload
     sudo systemctl enable sunbeam
     sudo systemctl start sunbeam
-    echo systemctl status sunbeam
+    sudo systemctl status sunbeam
 fi
 
 echo "===================================================="

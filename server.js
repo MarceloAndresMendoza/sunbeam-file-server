@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(express.static('public'))
 app.use(cors(corsOptions));
-app.use('/api/v0', imageRouter)
+app.use(`/api/v${process.env.APIVERSION}/`, imageRouter)
 
 // db()
 
