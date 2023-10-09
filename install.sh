@@ -43,6 +43,7 @@ if [ -f "$TARGET_DIR/.env" ]; then
     # Restart the service
     echo "Restarting the service..."
     sudo systemctl restart sunbeam
+    sudo systemctl status sunbeam
     echo "Update finished."
 else
     # Copy your app files to the target directory
