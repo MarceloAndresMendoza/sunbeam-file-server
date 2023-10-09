@@ -57,6 +57,9 @@ else
     # Install your app's dependencies (if needed)
     echo "Installing dependencies..."
     npm install
+    # Create the uploads folder
+    echo "Creating uploads folder..."
+    mkdir -p public/uploads
     # Configure the server
     echo "SUNBEAM CONFIGURATION"
     echo "Please, take your time to configure properly these options."
