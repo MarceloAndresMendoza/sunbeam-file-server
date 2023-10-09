@@ -28,12 +28,14 @@ export const upload = multer({ storage });
 // Handle the upload request
 export const uploadFile = (req, res) => {
     if (req.file) {
-        // check if the file is less than 10MB
-        if (req.file.size > 10000000) {
-            console.log(`CL: ${new Date().toLocaleString('es-CL', { timeZone: 'America/Santiago' })} █x█ File upload failed: File too large! Must be less than 10MB`);
+        // check if the file is less than env.MAXFILESIZE
+        const maxsize = process.env.MAXFILESIZE;
+        if (req.file.size > maxsize) {
+            console.log(`CL: ${new Date().toLocaleString('es-CL', { timeZone: 'America/Santiago' })} █x█ File upload failed: File too large! Must be less than ${maxsize} bytes`);
             return res.status(400).json({
                 message: "File upload failed!",
                 filename: req.file.filename,
+                maxfilesize: `${maxsize} bytes`,
                 error: "File too large",
             });
         }

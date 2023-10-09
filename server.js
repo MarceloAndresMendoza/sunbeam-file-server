@@ -24,7 +24,10 @@ app.use('/api/v0', imageRouter)
 // db()
 
 app.listen(PORT, () => {
-    console.log('----------------------------');
-    console.log('File server started on port ', PORT);
-    console.log('----------------------------');
+    console.log('====================================');
+    console.log('  SUNBEAM FILE STORE API SERVER')
+    console.log('    DOBLEFOCO LIMITADA - 2023');
+    console.log('------------------------------------');
+    console.log(' File server started on port ', PORT);
+    console.log('====================================');
 })
