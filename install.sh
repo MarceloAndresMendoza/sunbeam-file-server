@@ -75,7 +75,7 @@ else
     CORSORIGIN='$CORSORIGIN'
     APPNAME='Sunbeam File Server'
     APPAUTHOR='Marcelo Mendoza'
-    APPVERSION='0.1.1'
+    APPVERSION='1.0.5'
     APPDESCRIPTION='A simple file server. Upload, download and delete files.'
     APPDATE='October 10, 2023'
     APPCOPYRIGHT='(c) 2013 Marcelo Mendoza'

@@ -21,7 +21,7 @@ export const getServerStatus =(req, res) => {
                 description: "Returns the status of the server."
             },
             uploadimage: {
-                post: `/api/v${process.env.APIVERSION}/upload`,
+                post: `/api/v${process.env.APIVERSION}/files`,
                 description: "Uploads an image to the server.",
                 use: {
                     headers: {
@@ -38,8 +38,17 @@ export const getServerStatus =(req, res) => {
                 }
             },
             downloadImage: {
-                get: `/api/v${process.env.APIVERSION}/download?filename=<filename>`,
+                get: `/api/v${process.env.APIVERSION}/files?filename=<filename>`,
                 description: "Downloads an image from the server.",
+                use: {
+                    headers: {
+                        "x-api-key" : "<Your_api_key>",
+                    },
+                }
+            },
+            deleteImage: {
+                delete: `/api/v${process.env.APIVERSION}/files?filename=<filename>`,
+                description: "Deletes an image from the server.",
                 use: {
                     headers: {
                         "x-api-key" : "<Your_api_key>",
