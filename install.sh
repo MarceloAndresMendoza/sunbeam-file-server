@@ -3,6 +3,12 @@ echo "========================================================"
 echo "This script will install the SunBeam File Server program"
 echo "========================================================"
 
+# Check if node.js is installed
+if ! [ -x "$(command -v node)" ]; then
+    echo "Error: node.js is not installed. Install it via npm. https://github.com/nvm-sh/nvm" >&2
+    exit 1
+fi
+
 # Specify the source directory of the node.js app
 SOURCE_DIR="./"
 
@@ -54,7 +60,7 @@ else
     read -p "Enter CORS origin (e.g., *): " CORSORIGIN
     read -p "Enter api version (e.g., 0): " APIVERSION
     read -p "Enter api key: " APIKEY
-    read -p "Enter port number (e.g., 3000): " PORT
+    read -p "Enter port number (e.g., 3000 / MAX: 65536): " PORT
     read -p "Enter max file size on bytes (e.g., 10000000, seven zeroes, are 10 mb): " MAXFILESIZE
 
     # Generate the configuration file, hardcoding some values
