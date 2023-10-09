@@ -55,6 +55,7 @@ else
     read -p "Enter api version (e.g., 0): " APIVERSION
     read -p "Enter api key: " APIKEY
     read -p "Enter port number (e.g., 3000): " PORT
+    read -p "Enter max file size on bytes (e.g., 10000000, seven zeroes, are 10 mb): " MAXFILESIZE
 
     # Generate the configuration file, hardcoding some values
     cat << EOF > .env
