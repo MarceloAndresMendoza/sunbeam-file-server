@@ -116,6 +116,6 @@ echo "Check the above result of the service status."
 echo "===================================================="
 echo If everything is ok, you can safely delete this folder.
 echo - Installation location: $TARGET_DIR
-echo - To stop the service: systemctl stop api-nodemailer
-echo - To disable the service: systemctl disable api-nodemailer
+echo - To stop the service: systemctl stop sunbeam
+echo - To disable the service: systemctl disable sunbeam
 echo "==========================================================="
