@@ -1,6 +1,8 @@
 # SunBeam File Server
 
-SunBeam is a simple file server for a node.js environment to install preferably on a linux machine. 
+SunBeam is a simple file server for a node.js environment to install preferably on a linux machine.
+It uses fs and multer to save files on the local filesystem an provides an API Rest for upload, download and delete those files.
+It was made mainly to serve image files, but as a side effect, it just can server any type of file.
 
 ### Important Notes and Disclaimer
 While efforts have been made to ensure its functionality, it might not represent the best or most comprehensive implementation.
