@@ -40,7 +40,7 @@ and your server's port forwarding options.
 
 SunBeam provides a RESTful API for upload and server files. Refer to the API endpoints documented below the install section.
 
-# API-NodeMailer Installation Script: 
+# SunBeam Installation Script: 
 **install.sh**
 
 This script automates the installation of the API-NodeMailer program. It performs the following steps:
