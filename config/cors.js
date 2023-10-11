@@ -1,9 +1,11 @@
 import dotenv from 'dotenv';
 dotenv.config();
+const ORIGIN = process.env.CORSORIGIN;
+console.log('cORS', ORIGIN);
 
 export const corsOptions={
     origin:[
-        process.env.CORSORIGIN,
+        ORIGIN,
     ],
     optionsSucessStatus: 200
 }
