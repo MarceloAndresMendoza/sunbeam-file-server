@@ -6,7 +6,7 @@ import { checkApiKey } from "../middlewares/auth.middleware.js";
 const imageRouter = express.Router();
 
 imageRouter.get('/', getServerStatus);
-imageRouter.get('/files', checkApiKey, downloadFile);
+imageRouter.get('/files', downloadFile);
 imageRouter.post('/files',checkApiKey, upload.single('file'), uploadFile);
 imageRouter.delete('/files', checkApiKey, deleteFile);
 
