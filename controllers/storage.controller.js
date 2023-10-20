@@ -66,6 +66,7 @@ export const downloadFile = (req, res) => {
             console.log(`CL: ${new Date().toLocaleString('es-CL', { timeZone: 'America/Santiago' })} █x█ File download failed: ${err}`);
             return res.status(404).json({
                 message: "File not found!",
+                error: err,
                 filename: req.query.filename,
             });
         }
@@ -96,6 +97,7 @@ export const deleteFile = (req, res) => {
             console.log(`CL: ${new Date().toLocaleString('es-CL', { timeZone: 'America/Santiago' })} █x█ File delete failed: ${err}`);
             return res.status(404).json({
                 message: "File not found!",
+                error: err,
                 filename: req.query.filename,
             });
         }
