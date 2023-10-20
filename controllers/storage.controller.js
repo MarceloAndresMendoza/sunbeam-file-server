@@ -9,6 +9,8 @@
 import multer from "multer";
 import { currentDirPath } from "../server.js";
 import fs from "fs";
+import dotenv from 'dotenv'
+dotenv.config()
 
 // Set the storage destination and file name for uploaded files
 const storage = multer.diskStorage({
@@ -43,6 +45,7 @@ export const uploadFile = (req, res) => {
         res.status(200).json({
             message: "File uploaded successfully!",
             filename: req.file.filename,
+            path: `http://sunbeam.rweb.cl/api/v${process.env.APIVERSION}/files?filename=${req.file.filename}`
         });
     } else {
         console.log(`CL: ${new Date().toLocaleString('es-CL', { timeZone: 'America/Santiago' })} █x█ File upload failed: No file uploaded`);
