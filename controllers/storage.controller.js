@@ -45,7 +45,7 @@ export const uploadFile = (req, res) => {
         res.status(200).json({
             message: "File uploaded successfully!",
             filename: req.file.filename,
-            url: `http://sunbeam.rweb.cl/api/v${process.env.APIVERSION}/files?filename=${req.file.filename}`
+            url: `https://sunbeam.rweb.cl/api/v${process.env.APIVERSION}/files?filename=${req.file.filename}`
         });
     } else {
         console.log(`CL: ${new Date().toLocaleString('es-CL', { timeZone: 'America/Santiago' })} █x█ File upload failed: No file uploaded`);
